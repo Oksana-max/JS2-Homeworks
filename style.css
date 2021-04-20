@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wraper {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(241, 233, 221);
+}
+
+.cart-button {
+    padding: 8px 16px;
+    border-radius: 7px;
+    background-color: rgb(216, 202, 185);
+    margin-top: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    color: white;
+    background-color: rgb(235, 201, 50);
+}
+
+.goods-list {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.goods-item {
+    border: 1px solid bisque;
+    padding: 20px;
+    width: 150px;
+    height: 250px;
+}
