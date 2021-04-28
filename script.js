@@ -7,6 +7,8 @@
 
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
+
+
 function makeGETRequest(url) {
     return new Promise((resolve, reject) => {
         let xhr;
