@@ -8,15 +8,9 @@
 
 <body>
     <div id="app">
-        <header class="header">
-            <input type="text" class="goods-search" v-model="searchLine" />
-            <button class=" search-button " type="button " v-on:click="filterGoods ">Искать</button>
-            <button class="cart-button " type="button " v-on:click="handleCart">Корзина</button>
-        </header>
+        <goods-search></goods-search>
         <goods-list :goods="filteredGoods"></goods-list>
-        <div v-show="isVisibleCart" class="cart">
-            Корзина
-        </div>
+        <cart></cart>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js "></script>
