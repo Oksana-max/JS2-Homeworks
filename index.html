@@ -13,23 +13,15 @@
             <button class=" search-button " type="button " v-on:click="filterGoods ">Искать</button>
             <button class="cart-button " type="button " v-on:click="handleCart">Корзина</button>
         </header>
-        <main>
-            <div v-if="filteredGoods.length !==0" class="goods-list ">
-                <div class="goods-item " v-for="good in filteredGoods ">
-                    <h3>{{ good.product_name }}</h3>
-                    <p>{{ good.price }}</p>
-                </div>
-            </div>
-            <div v-else>Нет данных</div>
-            <div v-show="isVisibleCart" class="cart">
-                Корзина
-            </div>
-        </main>
-
+        <goods-list :goods="filteredGoods"></goods-list>
+        <div v-show="isVisibleCart" class="cart">
+            Корзина
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js "></script>
     <script src="script.js "></script>
+    <script src="components.js"></script>
 </body>
 
 </html>

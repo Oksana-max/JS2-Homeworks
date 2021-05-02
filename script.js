@@ -45,10 +45,8 @@ const app = new Vue({
 
             xhr.open('GET', url, true);
             xhr.send();
-        },
-        searchLineFor() {
-
         }
+
     },
 
 
