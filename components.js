@@ -26,35 +26,29 @@ Vue.component('goods-item', {
 
 Vue.component('cart', {
     name: 'cart',
-    props: ['isVisibleCart'],
-    isVisibleCart: false,
+    data: () => ({
+        isVisibleCart: false,
+    }),
     methods: {
         handleCart() {
             this.isVisibleCart = !this.isVisibleCart;
         }
     },
     template: `
-    <div><button class="cart-button " type="button " v-on:click="handleCart">Корзина</button>
-    <div v-show="isVisibleCart" class="cart">Корзина</div></div>`
+    <div>
+    <button class="cart-button " type="button " v-on:click="handleCart">Корзина</button>
+    <div v-show="isVisibleCart" class="cart">Корзина</div>
+    </div>`
 });
+
+
 
 Vue.component('goods-search', {
     name: 'goods-search',
-    props: ['filterGoods'],
-    searchLine: '',
-    // methods: {
-    //     filterGoods() {
-    //         console.log('this.searchLine :>> ', this.searchLine);
-    //         const regexp = new RegExp(this.searchLine, 'i');
-    //         this.filteredGoods = this.goods.filter(good => regexp.test(good.product_name));
-    //     },
-    //     onSearch() {
-    //         
-    //     }
-    // },
+    props: ['searchLine'],
     template: `
     <header class="header">
-            <input type="text" class="goods-search" v-model="searchLine" />
-            <button class=" search-button " type="button " v-on:click="filterGoods ">Искать</button>
+            <input :value="searchLine" @input="$emit('input', $event.target.value)" type="text" class="goods-search" />
+            <button @click="$emit('filter-goods')" class=" search-button " type="button ">Искать</button>
             </header>`
 });

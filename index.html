@@ -8,7 +8,7 @@
 
 <body>
     <div id="app">
-        <goods-search></goods-search>
+        <goods-search v-model="searchLine" @filter-goods="filterGoods"></goods-search>
         <goods-list :goods="filteredGoods"></goods-list>
         <cart></cart>
     </div>

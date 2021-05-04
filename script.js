@@ -6,7 +6,7 @@ const app = new Vue({
         goods: [],
         filteredGoods: [],
         searchLine: '',
-        isVisibleCart: false
+
     }),
     mounted() {
         this.makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
@@ -50,9 +50,6 @@ const app = new Vue({
     },
 
 
-    watch: {
-        filteredGoods() {
-            console.log('this.filteredGoods :>> ', this.filteredGoods);
-        }
-    }
+
+
 });
