@@ -1,0 +1,23 @@
+{
+  "name": "js2git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "components.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oksana-max/JS2-Homeworks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oksana-max/JS2-Homeworks/issues"
+  },
+  "homepage": "https://github.com/Oksana-max/JS2-Homeworks#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
